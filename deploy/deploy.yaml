@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: my-app
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: umairk8s/umairtestrepo2:sha-4c70a92
+        image: umairk8s/umairtestrepo2:sha-e9b2c80
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: umairk8s/umairtestrepo2:sha-59ebb41
+        image: umairk8s/umairtestrepo2:sha-4c70a92
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: umairk8s/umairtestrepo2:sha-b5b6583
+        image: umairk8s/umairtestrepo2:sha-2293f76
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
@@ -95,9 +95,9 @@ spec:
   issuerRef:
     name: production-app
     kind: ClusterIssuer
-  commonName: demo.4.249.236.5.traefik.me
+  commonName: demo.kubesimplify.com
   dnsNames:
-  - demo.4.249.236.5.traefik.me
+  - demo.kubesimplify.com 
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -109,7 +109,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: demo.4.249.236.5.traefik.me
+  - host: demo.kubesimplify.com
     http:
       paths:
       - path: /
@@ -121,7 +121,7 @@ spec:
               number: 80
   tls:
   - hosts:
-    - demo.4.249.236.5.traefik.me
+    - demo.kubesimplify.com
     secretName: app
 ---
 apiVersion: v1
